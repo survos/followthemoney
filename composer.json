@@ -1,0 +1,30 @@
+{
+    "name": "survos/followthemoney",
+    "description": "FollowTheMoney schema model and entity interchange for PHP",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.5",
+        "ext-intl": "*",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Survos\\FollowTheMoney\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Survos\\FollowTheMoney\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "suggest": {
+        "survos/jsonl-bundle": "Streaming JSONL file reading/writing, gzip and resumable ingestion in Symfony applications"
+    }
+}

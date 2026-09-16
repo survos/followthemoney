@@ -1,0 +1,507 @@
+{
+  "upstream": {
+    "repository": "https://github.com/alephdata/followthemoney",
+    "revision": "c70a89ffa59ea785956f6095643310da3735b7fb",
+    "model_sha256": "706e63a1007147120ca2f9446ee1d5317254ec53df9d2a84001fbc287a7d7b87",
+    "license": "MIT",
+    "export": "Resolved properties, including inherited and reverse properties; English metadata."
+  },
+  "requirements_sha256": "3297e85c0fa9d7498d7894f0d2bcbcc2a2d56fe25c20752edffbc587d684f1b0",
+  "normalization": [
+    {
+      "type": "string",
+      "format": null,
+      "input": null,
+      "expected": null
+    },
+    {
+      "type": "string",
+      "format": null,
+      "input": "",
+      "expected": null
+    },
+    {
+      "type": "string",
+      "format": null,
+      "input": "  Emily  Berry  ",
+      "expected": "Emily  Berry"
+    },
+    {
+      "type": "string",
+      "format": null,
+      "input": "first\nsecond",
+      "expected": "first\nsecond"
+    },
+    {
+      "type": "string",
+      "format": null,
+      "input": "a\u0000b",
+      "expected": "ab"
+    },
+    {
+      "type": "string",
+      "format": null,
+      "input": "é",
+      "expected": "é"
+    },
+    {
+      "type": "string",
+      "format": null,
+      "input": true,
+      "expected": "True"
+    },
+    {
+      "type": "string",
+      "format": null,
+      "input": 1.23456,
+      "expected": "1.235"
+    },
+    {
+      "type": "name",
+      "format": null,
+      "input": " \"Emily   Berry\" ",
+      "expected": "Emily Berry"
+    },
+    {
+      "type": "name",
+      "format": null,
+      "input": "'Emily'",
+      "expected": "Emily"
+    },
+    {
+      "type": "name",
+      "format": null,
+      "input": "Emily\nBerry",
+      "expected": "Emily Berry"
+    },
+    {
+      "type": "name",
+      "format": null,
+      "input": "Miss Emily A. Berry",
+      "expected": "Miss Emily A. Berry"
+    },
+    {
+      "type": "address",
+      "format": null,
+      "input": " Culpeper\nVirginia ",
+      "expected": "Culpeper, Virginia"
+    },
+    {
+      "type": "address",
+      "format": null,
+      "input": "a,,b",
+      "expected": "a, b"
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953",
+      "expected": "1953"
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953-01",
+      "expected": "1953-01"
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953-01-02",
+      "expected": "1953-01-02"
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953-02-30",
+      "expected": null
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953-13",
+      "expected": null
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "not a date",
+      "expected": null
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953-01-02T12",
+      "expected": "1953-01-02T12"
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953-01-02T12:34",
+      "expected": "1953-01-02T12:34"
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953-01-02T12:34:56",
+      "expected": "1953-01-02T12:34:56"
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953-01-02T12:34:00Z",
+      "expected": "1953-01-02T12:34"
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953-1-2",
+      "expected": "1953-01-02"
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1890 circa",
+      "expected": "1890"
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "0999",
+      "expected": null
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953-00",
+      "expected": "1953"
+    },
+    {
+      "type": "date",
+      "format": null,
+      "input": "1953-01-02T12:34:56+02:00",
+      "expected": "1953-01-02T10:34:56"
+    },
+    {
+      "type": "url",
+      "format": null,
+      "input": "https://example.org",
+      "expected": "https://example.org/"
+    },
+    {
+      "type": "url",
+      "format": null,
+      "input": "example.org/article/1",
+      "expected": "http://example.org/article/1"
+    },
+    {
+      "type": "url",
+      "format": null,
+      "input": "https://example.org/a?q=1",
+      "expected": "https://example.org/a?q=1"
+    },
+    {
+      "type": "url",
+      "format": null,
+      "input": "not-url",
+      "expected": null
+    },
+    {
+      "type": "entity",
+      "format": null,
+      "input": "person-emily",
+      "expected": "person-emily"
+    },
+    {
+      "type": "entity",
+      "format": null,
+      "input": "bad_id",
+      "expected": null
+    },
+    {
+      "type": "entity",
+      "format": null,
+      "input": "a",
+      "expected": "a"
+    },
+    {
+      "type": "entity",
+      "format": null,
+      "input": "bad id",
+      "expected": null
+    },
+    {
+      "type": "entity",
+      "format": null,
+      "input": ".bad",
+      "expected": null
+    },
+    {
+      "type": "number",
+      "format": null,
+      "input": "1,000.00",
+      "expected": "1,000.00"
+    },
+    {
+      "type": "number",
+      "format": null,
+      "input": "unknown",
+      "expected": "unknown"
+    },
+    {
+      "type": "number",
+      "format": null,
+      "input": 42,
+      "expected": "42"
+    },
+    {
+      "type": "gender",
+      "format": null,
+      "input": "F",
+      "expected": "female"
+    },
+    {
+      "type": "gender",
+      "format": null,
+      "input": "woman",
+      "expected": "female"
+    },
+    {
+      "type": "gender",
+      "format": null,
+      "input": "female",
+      "expected": "female"
+    },
+    {
+      "type": "gender",
+      "format": null,
+      "input": "divers",
+      "expected": "other"
+    },
+    {
+      "type": "gender",
+      "format": null,
+      "input": "unknown",
+      "expected": null
+    },
+    {
+      "type": "country",
+      "format": null,
+      "input": "US",
+      "expected": "us"
+    },
+    {
+      "type": "country",
+      "format": null,
+      "input": "gb",
+      "expected": "gb"
+    },
+    {
+      "type": "country",
+      "format": null,
+      "input": "United States",
+      "expected": "us"
+    },
+    {
+      "type": "country",
+      "format": null,
+      "input": "United Kingdom",
+      "expected": "gb"
+    },
+    {
+      "type": "country",
+      "format": null,
+      "input": "zz",
+      "expected": "zz"
+    },
+    {
+      "type": "language",
+      "format": null,
+      "input": "eng",
+      "expected": "eng"
+    },
+    {
+      "type": "language",
+      "format": null,
+      "input": "en",
+      "expected": "eng"
+    },
+    {
+      "type": "language",
+      "format": null,
+      "input": "English",
+      "expected": "eng"
+    },
+    {
+      "type": "language",
+      "format": null,
+      "input": "fra",
+      "expected": "fra"
+    },
+    {
+      "type": "language",
+      "format": null,
+      "input": "French",
+      "expected": "fra"
+    },
+    {
+      "type": "language",
+      "format": null,
+      "input": "zz",
+      "expected": null
+    },
+    {
+      "type": "email",
+      "format": null,
+      "input": "Emily@EXAMPLE.COM",
+      "expected": "Emily@example.com"
+    },
+    {
+      "type": "email",
+      "format": null,
+      "input": "not mail",
+      "expected": null
+    },
+    {
+      "type": "email",
+      "format": null,
+      "input": "\"Emily@example.com\"",
+      "expected": "Emily@example.com"
+    },
+    {
+      "type": "identifier",
+      "format": "qid",
+      "input": " Q42 ",
+      "expected": "Q42"
+    },
+    {
+      "type": "identifier",
+      "format": "qid",
+      "input": "q42",
+      "expected": "Q42"
+    },
+    {
+      "type": "identifier",
+      "format": "qid",
+      "input": "Q0",
+      "expected": "Q0"
+    },
+    {
+      "type": "identifier",
+      "format": "qid",
+      "input": "Q001",
+      "expected": "Q001"
+    },
+    {
+      "type": "identifier",
+      "format": "qid",
+      "input": "https://www.wikidata.org/wiki/Q42",
+      "expected": "Q42"
+    },
+    {
+      "type": "identifier",
+      "format": "qid",
+      "input": "not-qid",
+      "expected": null
+    }
+  ],
+  "entities": [
+    {
+      "schema": "Person",
+      "id": "emily-berry",
+      "input": {
+        "name": [
+          " \"Emily Armstead Berry\" ",
+          "Emily Armstead Berry"
+        ],
+        "alias": [
+          "Emily A. Berry"
+        ],
+        "deathDate": [
+          "1953-01"
+        ],
+        "gender": [
+          "F"
+        ],
+        "wikidataId": [
+          "q42"
+        ]
+      },
+      "expected": {
+        "id": "emily-berry",
+        "schema": "Person",
+        "properties": {
+          "name": [
+            "Emily Armstead Berry"
+          ],
+          "alias": [
+            "Emily A. Berry"
+          ],
+          "deathDate": [
+            "1953-01"
+          ],
+          "gender": [
+            "female"
+          ],
+          "wikidataId": [
+            "Q42"
+          ]
+        }
+      }
+    },
+    {
+      "schema": "Family",
+      "id": "emily-mother",
+      "input": {
+        "person": [
+          "emily-berry"
+        ],
+        "relative": [
+          "lucy-berry"
+        ],
+        "relationship": [
+          "mother"
+        ]
+      },
+      "expected": {
+        "id": "emily-mother",
+        "schema": "Family",
+        "properties": {
+          "person": [
+            "emily-berry"
+          ],
+          "relative": [
+            "lucy-berry"
+          ],
+          "relationship": [
+            "mother"
+          ]
+        }
+      }
+    },
+    {
+      "schema": "Organization",
+      "id": "culpeper-baptist",
+      "input": {
+        "name": [
+          "Culpeper Baptist church"
+        ],
+        "country": [
+          "US"
+        ]
+      },
+      "expected": {
+        "id": "culpeper-baptist",
+        "schema": "Organization",
+        "properties": {
+          "name": [
+            "Culpeper Baptist church"
+          ],
+          "country": [
+            "us"
+          ]
+        }
+      }
+    }
+  ]
+}
