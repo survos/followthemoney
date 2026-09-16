@@ -1,5 +1,10 @@
 # survos/followthemoney
 
+Based on [FollowTheMoney — original project and documentation](https://followthemoney.tech/)
+and the [original Python library, alephdata/followthemoney](https://github.com/alephdata/followthemoney).
+Browse the upstream [schema explorer](https://followthemoney.tech/explorer/) for the model
+we reuse. This PHP package is maintained independently by Survos.
+
 PHP 8.5 library for the FollowTheMoney entity model, with no Python process,
 Symfony kernel, database or search service required at runtime. MIT licensed.
 
@@ -11,10 +16,18 @@ not an official FollowTheMoney release or a complete port of its Python tools.
 
 ## Installation
 
-Until this package is published, add a Composer path repository pointing to
-`mono/lib/followthemoney`, then require `survos/followthemoney:@dev` in the consuming
-application. PHP 8.5, ext-intl and ext-mbstring are required. The mono root already
-registers its namespace for development and includes its tests.
+Install the [published package on Packagist](https://packagist.org/packages/survos/followthemoney):
+
+```sh
+composer require survos/followthemoney
+```
+
+Requires PHP 8.5, ext-intl and ext-mbstring. No Symfony or Python runtime is required.
+For Symfony applications that process JSONL files, also install `survos/jsonl-bundle`.
+
+For development inside the Survos monorepo, the mono root already registers the
+library's namespace and includes its tests. Other local applications may use a
+Composer path repository pointing to `mono/lib/followthemoney`.
 
 ## Entities and relationships
 
